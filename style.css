@@ -1,0 +1,7 @@
+.score {
+    height: 100px;
+    width: 300px;
+    border: 1px black solid;
+    font-size: 3rem;
+    text-align: center;
+}
