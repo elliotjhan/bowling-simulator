@@ -1,0 +1,56 @@
+
+.hidden {
+    display: none;
+}
+
+.score {
+    height: 100px;
+    width: 300px;
+    border: 1px black solid;
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.bowlAction {
+    display: flex;
+    margin: 0 auto;
+}
+
+.endGameModal {
+    margin: 0 auto;
+    height: 300px;
+    width: 500px;
+    background-color: navy;
+    color: white;
+    font-size: 3rem;
+}
+
+.frameContainer {
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.frame {
+    border: 3px black solid;
+    height: 100px;
+    width: 100px;
+    display: flex;
+}
+
+.firstBowl,
+.secondBowl {
+    height: 100px;
+    width: 49px;
+}
+.firstBowl {
+    border-right: 1px red solid;
+}
+
+.scoreTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px auto;
+}
