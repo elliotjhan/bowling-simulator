@@ -18,6 +18,7 @@ class Scoring {
         this.strike = false;
         this.calculateCurrentTurn = this.calculateCurrentTurn.bind(this);
         this.resetGame = this.resetGame.bind(this);
+        this.startGame = this.startGame.bind(this);
     }
 
     attachClickHandlers() {
@@ -25,6 +26,13 @@ class Scoring {
             this.calculateCurrentTurn();
         });
         $('.modalCloseButton').click(this.resetGame);
+        $('.startGameButton').click(this.startGame);
+    }
+
+    startGame() {
+        let name = $('.startInput').val();
+        $('.nameHeader').text(name + " is currently playing");
+        $('.startGameModal').addClass('hidden');
     }
 
     generatePinsKnockedDown() {
@@ -110,6 +118,8 @@ class Scoring {
         $('.score').text('0');
         $('.firstBowl, .secondBowl').text('');
         $('.endGameModal').addClass('hidden');
+        $('.startGameModal').removeClass('hidden');
+        $('.startInput').val('');
     }
 
     displayScoreToScreen() {
