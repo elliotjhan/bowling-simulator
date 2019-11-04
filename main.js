@@ -82,12 +82,12 @@ class Scoring {
         this.displayCurrentFrame(this.frame);
         this.strike = false; // set strike to false since this frame was not a strike   
         this.firstOrSecondBowl--; // after the second bowl is completed, decrement this.firstorsecondbowl 
-        this.resetFrame(); // will always move to the next frame after the second bowl
         if(this.currentPinsStanding === 0) {
             this.spare = true; // will use this to calculate special scoring for spares
         } else {
             this.spare = false;
         }
+        this.resetFrame(); // will always move to the next frame after the second bowl
     }
 
     calculateCurrentTurn() {
@@ -129,8 +129,14 @@ class Scoring {
     displayCurrentFrame(currentFrame) {
         this.displayScoreToScreen();
         if(this.firstOrSecondBowl === 1) {
+            if(this.currentPinsStanding === 0) {
+                this.pinsKnockedDown = "X";
+            }
             $('.frame' + currentFrame + ' > .firstBowl').text(this.pinsKnockedDown);
         } else {
+            if(this.currentPinsStanding === 0) {
+                this.pinsKnockedDown = "/";
+            }
             $('.frame' + currentFrame + ' > .secondBowl').text(this.pinsKnockedDown);
         }
     }
