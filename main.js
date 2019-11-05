@@ -58,6 +58,10 @@ class Scoring {
         }
     }
 
+    calculateConsecutiveStrikeScoring() {
+
+    }
+
     simulateFirstBowl() {
         this.generatePinsKnockedDown();
         if(this.currentPinsStanding !== 0) { // checks if the first bowl was a strike
@@ -104,6 +108,7 @@ class Scoring {
 
     displayModal() {
         $('.finalScore').text(this.score);
+        $('.endGameModalFrameContainer').append($('.frameContainer').html());
         $('.endGameModal').removeClass('hidden');
     }
 
@@ -162,6 +167,7 @@ class CreateGame {
                     )
             );
         }
+        $('.frame10').append($('<div>').addClass('thirdBowl'));
     }
 
 }

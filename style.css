@@ -68,11 +68,15 @@
     z-index: 99;
 }
 
+.endGameModalFrameContainer,
 .frameContainer {
     height: 100px;
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .frame {
@@ -83,7 +87,8 @@
 }
 
 .firstBowl,
-.secondBowl {
+.secondBowl,
+.thirdBowl {
     height: 100px;
     width: 49px;
 }
@@ -91,6 +96,9 @@
     border-right: 1px red solid;
 }
 
+.thirdBowl {
+    border-left: 1px red solid;
+}
 .scoreTitle {
     font-size: 2rem;
     text-align: center;
