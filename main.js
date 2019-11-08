@@ -59,7 +59,7 @@ class Scoring {
     }
 
     calculateConsecutiveStrikeScoring() {
-
+        // special scoring when strikes are bowled consecutively 
     }
 
     simulateFirstBowl() {
@@ -137,12 +137,12 @@ class Scoring {
             if(this.currentPinsStanding === 0) {
                 this.pinsKnockedDown = "X";
             }
-            $('.frame' + currentFrame + ' > .firstBowl').text(this.pinsKnockedDown);
+            $(`.frame${currentFrame} > .firstBowl`).text(this.pinsKnockedDown);
         } else {
             if(this.currentPinsStanding === 0) {
                 this.pinsKnockedDown = "/";
             }
-            $('.frame' + currentFrame + ' > .secondBowl').text(this.pinsKnockedDown);
+            $(`.frame${currentFrame} > .secondBowl`).text(this.pinsKnockedDown);
         }
     }
     
