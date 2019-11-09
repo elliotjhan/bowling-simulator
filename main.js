@@ -145,6 +145,23 @@ class Scoring {
             $(`.frame${currentFrame} > .secondBowl`).text(this.pinsKnockedDown);
         }
     }
+
+    displayFinalFrame() {
+        this.displayScoreToScreen();
+        if(this.firstOrSecondBowl === 1) {
+            if(this.currentPinsStanding === 0) {
+                this.pinsKnockedDown = "X";
+            }
+            $(`.frame10 > .firstBowl`).text(this.pinsKnockedDown);
+        } else if(this.firstOrSecondBowl === 2) {
+            if(this.currentPinsStanding === 0) {
+                this.pinsKnockedDown = "/";
+            }
+            $(`.frame10 > .secondBowl`).text(this.pinsKnockedDown);
+        } else if(this.firstOrSecondBowl === 3) {
+            $(`.thirdBowl`).text(this.pinsKnockedDown);
+        }
+    }
     
 }
 
