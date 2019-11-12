@@ -133,6 +133,9 @@ class Scoring {
 
     displayCurrentFrame(currentFrame) {
         this.displayScoreToScreen();
+        if(currentFrame === 10) {
+            this.displayFinalFrame();
+        }
         if(this.firstOrSecondBowl === 1) {
             if(this.currentPinsStanding === 0) {
                 this.pinsKnockedDown = "X";
