@@ -1,4 +1,4 @@
-# Not You Average Bowling Game
+# Not Your Average Bowling Game
 
 Here you will see a bowling simulator in progress. Basic logic and frame rendering are in place. Next steps are to 
 finalize scoring logic, store statistics in MySQL, add multiple players, and implement animations. 
