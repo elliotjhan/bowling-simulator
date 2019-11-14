@@ -64,6 +64,10 @@ class Scoring {
 
     simulateFirstBowl() {
         this.generatePinsKnockedDown();
+        if(this.frame === 10) {
+            this.displayFinalFrame();
+            return;
+        }
         if(this.currentPinsStanding !== 0) { // checks if the first bowl was a strike
             this.score += this.pinsKnockedDown; // add the number of pins knocked down to the score
             this.calculateSpareScoring(); // if the last frame was a spare, add current pins knocked down again
@@ -80,6 +84,10 @@ class Scoring {
     }
 
     simulateSecondBowl() {
+        if(this.frame === 10) {
+            this.displayFinalFrame();
+            return;
+        }
         this.generatePinsKnockedDown();
         this.score += this.pinsKnockedDown;
         this.calculateStrikeScoring(); // if the last frame was a strike, add the current pins knocked down again
@@ -165,7 +173,7 @@ class Scoring {
             $(`.thirdBowl`).text(this.pinsKnockedDown);
         }
     }
-    
+
 }
 
 class CreateGame {
