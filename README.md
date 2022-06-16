@@ -25,7 +25,6 @@ finalize scoring logic, store statistics in MySQL, add multiple players, and imp
 4. Bootstrap 4
 5. Node.js
 6. MySQL
-7. phpMyAdmin 
 8. jQuery
 
 # Contributing
